@@ -1,0 +1,272 @@
+/* ---------- Dark Theme & Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+body {
+  background-color: #de6bcf;
+  color: #E0E0E0;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* ---------- Header Navigation ---------- */
+.app-header {
+  background: linear-gradient(135deg, #167089 0%, #6a0b99 100%);
+  text-align: center;
+  padding: 1.75rem 1rem;
+  box-shadow: 0 4px 15px rgba(24, 122, 25, 0.4);
+}
+.app-header h1 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.app-header p {
+  font-size: 0.85rem;
+  color: #FFB3B3;
+  margin-top: 0.2rem;
+}
+
+.nav-tabs {
+  display: flex;
+  background: #1C1C1E;
+  border-bottom: 1px solid #2C2C2E;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.tab-btn {
+  flex: 1;
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
+  color: #8E8E93;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s ease;
+}
+.tab-btn.active {
+  color: #FFFFFF;
+  background: #2C2C2E;
+  border-bottom: 3px solid #FF453A;
+  font-weight: 600;
+}
+
+/* ---------- Layout Containers ---------- */
+.container {
+  max-width: 600px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+}
+.page-section {
+  display: none;
+}
+.page-section.active {
+  display: block;
+}
+
+.card {
+  background: #1C1C1E;
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #2C2C2E;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------- Form Elements ---------- */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #8E8E93;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  width: 100%;
+  padding: 0.85rem;
+  background: #2C2C2E;
+  border: 1px solid #3A3A3C;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s;
+}
+.form-input:focus {
+  border-color: #FF453A;
+}
+
+/* ---------- Student List Rows ---------- */
+.student-row {
+  display: flex;
+  flex-direction: column;
+  background: #1C1C1E;
+  border-radius: 12px;
+  padding: 1.1rem;
+  margin-bottom: 0.85rem;
+  border-left: 4px solid #FF453A;
+  border-top: 1px solid #2C2C2E;
+  border-right: 1px solid #2C2C2E;
+  border-bottom: 1px solid #2C2C2E;
+}
+.student-info {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFF;
+  margin-bottom: 0.85rem;
+}
+
+/* Status Matrix Buttons */
+.status-group {
+  display: flex;
+  gap: 0.5rem;
+}
+.status-btn {
+  flex: 1;
+  padding: 0.65rem 0.2rem;
+  border: 1px solid #3A3A3C;
+  background: #2C2C2E;
+  border-radius: 8px;
+  color: #AEAEB2;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.status-btn[data-status="มา"]:not(.selected) { color: #30D158; }
+.status-btn[data-status="สาย"]:not(.selected) { color: #FF9F0A; }
+.status-btn[data-status="ลา"]:not(.selected) { color: #BF5AF2; }
+.status-btn[data-status="ขาด"]:not(.selected) { color: #FF453A; }
+
+.status-btn[data-status="มา"].selected { background: #30D158; color: #FFF; border-color: #30D158; }
+.status-btn[data-status="สาย"].selected { background: #FF9F0A; color: #FFF; border-color: #FF9F0A; }
+.status-btn[data-status="ลา"].selected { background: #BF5AF2; color: #FFF; border-color: #BF5AF2; }
+.status-btn[data-status="ขาด"].selected { background: #FF453A; color: #FFF; border-color: #FF453A; }
+
+/* ---------- 🌟 Section Divider (หัวข้อแบ่งกลุ่ม อนบาล / ประถม) 🌟 ---------- */
+.section-divider {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FF9F0A;
+  margin: 1.5rem 0 0.75rem 0;
+  padding-left: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-divider.primary-school {
+  color: #0A84FF;
+}
+
+/* ---------- Class Summary Dashboard Cards ---------- */
+.class-summary-card {
+  background: #1C1C1E;
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #2C2C2E;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.class-header-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  border-bottom: 1px solid #2C2C2E;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.class-grid {
+  display: flex;
+  gap: 0.5rem;
+}
+.grid-item {
+  flex: 1;
+  background: #2C2C2E;
+  border-radius: 10px;
+  padding: 0.75rem 0.25rem;
+  text-align: center;
+  border: 1px solid #3A3A3C;
+}
+.grid-label {
+  font-size: 0.75rem;
+  color: #EBEBF5;
+  opacity: 0.6;
+  margin-bottom: 0.25rem;
+}
+.grid-count {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* ---------- Control Buttons ---------- */
+.btn-block {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, #A30F0F 0%, #7A0A0A 100%);
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(122,10,10,0.3);
+}
+.btn-block:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(122,10,10,0.4);
+}
+.btn-secondary {
+  background: #2C2C2E;
+  border: 1px solid #3A3A3C;
+  color: #FFF;
+  box-shadow: none;
+}
+.btn-secondary:hover { background: #3A3A3C; }
+
+/* ---------- Notification Toast ---------- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  padding: 0.9rem 1.5rem;
+  background: #30D158;
+  color: #FFF;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 24px rgba(48,209,88,0.3);
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
